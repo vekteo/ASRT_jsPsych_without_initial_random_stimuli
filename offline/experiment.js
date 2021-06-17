@@ -325,7 +325,7 @@ function expStart(subject, session) {
 
             /*define actual triplet as x, high, low, repetition or trill*/
 
-            if (lastTrial.is_practice == 1 || lastTrial.trial_number <= 7) { //if practice block or first 7 element
+            if (lastTrial.is_practice == 1 || lastTrial.trial_number <= 2) { //if practice block or first 7 element
                 lastTrial.triplet_type = "X" //trials to exclude
             }
             else if ((usedSequenceString.includes(lastTrial.actual_triplet[0] + lastTrial.actual_triplet[2])) || (usedSequenceString[3] + usedSequenceString[0] === lastTrial.actual_triplet[0] + lastTrial.actual_triplet[2])){ //if the 1st and the 3rd element of the triplet is part of the usedSequenceString
